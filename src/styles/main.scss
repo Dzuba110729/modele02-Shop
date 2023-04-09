@@ -18,8 +18,8 @@ body {
 }
 
 .header {
-	max-width: 1140px;
-	margin: 0 auto;
+	max-width: 1440px;
+	margin: 0 auto 6rem;
 	padding-left: 15px;
 	padding-right: 15px;
 	display: flex;
@@ -84,7 +84,7 @@ body {
 }
 
 .container {
-	max-width: 1140px;
+	max-width: 1440px;
 	margin: 0 auto;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -94,6 +94,8 @@ body {
 	background-image: url(../images/main.png);
 	background-size: cover;
 	background-position-x: center;
+	position: relative;
+	padding-bottom: 187px;
 	&__item {
 		margin-left: 12rem;
 		max-width: 378px;
@@ -101,6 +103,94 @@ body {
 	}
 	&__link {
 		margin-top: 6rem;
+	}
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__cover {
+		flex-basis: 763px;
+		height: 763px;
+		border: 1px solid rgba($green, 0.4);
+		border-radius: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+	&__line {
+		width: 658px;
+		height: 658px;
+		border: 1px solid rgba($green, 0.4);
+		border-radius: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__image {
+		width: 92%;
+	}
+	&__btn {
+		background-color: transparent;
+		border: none;
+		padding: 0;
+		position: absolute;
+		color: $green;
+		text-align: left;
+		&:hover {
+			.main__btn {
+				&::before {
+					background-color: $orange;
+					box-shadow: 0 0 0 4px $white, 0 0 0 5px $orange;
+				}
+			}
+		}
+		&::before {
+			content: '';
+			background-color: $green;
+			width: 11px;
+		   height: 11px;
+		   box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+		   border-radius: 100%;
+			position: absolute;
+		}
+		&_1 {
+			top: 20px;
+		   left: 100px;
+			&::before {
+				top: 22px;
+			   left: 90px;
+			}
+		}
+		&_2 {
+			top: 170px;
+			right: 20px;
+			&::before {
+				top: 15px;
+			   right: 87px;
+			}
+		}
+		&_3 {
+			bottom: -50px;
+			right: 270px;
+			&::before {
+				bottom: 50px;
+			   right: 38px;
+			}
+		}
+	}
+	&__food {
+		display: block;
+		color: rgba($green, 0.8);
+	}
+	&__tomato {
+		position: absolute;
+		bottom: 100px;
+		right: 100px;
+		width: 11rem;
 	}
 }
 
@@ -117,7 +207,7 @@ body {
 			display: block;
 		}
 	}
-}
+} 
 
 .description {
 	margin: 0;
