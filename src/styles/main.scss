@@ -2,6 +2,7 @@
 
 $green: #27300f;
 $orange: #d26a22;
+$dark-orange: #cf5c0d;
 $white: #fff;
 
 $font-jost: 'Jost', sans-serif;
@@ -15,6 +16,10 @@ body {
 	font-size: 1.6rem;
 	font-family: $font-jost;
 	color: $green;
+	background-image: url(../images/fon.png);
+	background-size: cover;
+	background-position-x: center;
+	background-repeat: no-repeat;
 }
 
 .header {
@@ -36,6 +41,7 @@ body {
 	&__link {
 		color: $green;
 		text-decoration: none;
+		transition: .2s;
 		&:hover {
 			color: $orange;
 		}
@@ -44,6 +50,7 @@ body {
 		color: $green;
 		font-weight: 500;
 		text-decoration: none;
+		transition: .2s;
 		&:hover {
 			color: $orange;
 		}
@@ -60,6 +67,8 @@ body {
 		background-size: 1.7rem 1.5rem;
 		position: relative;
 		border: 1px solid $orange;
+		transition: .2s;
+		cursor: pointer;
 		&:hover {
 			background-color: $green;
 			border: 1px solid $green;
@@ -81,6 +90,11 @@ body {
 	background-size: contain;
 	width: 12rem;
 	height: 3.2rem;
+	&__footer {
+		flex-basis: 18rem;
+		height: 4.8rem;
+		margin-top: 0.8rem;
+	}
 }
 
 .container {
@@ -91,10 +105,6 @@ body {
 }
 
 .main {
-	background-image: url(../images/main.png);
-	background-size: cover;
-	background-position-x: center;
-	background-repeat: no-repeat;
 	position: relative;
 	padding-bottom: 187px;
 	z-index: 0;
@@ -145,6 +155,7 @@ body {
 		position: absolute;
 		color: $green;
 		text-align: left;
+		cursor: pointer;
 		&:hover {
 			.main__btn {
 				&::before {
@@ -264,6 +275,10 @@ body {
 	text-decoration: none;
 	border-radius: 3.8rem;
 	display: inline-block;
+	transition: .2s;
+	&:hover {
+		background-color: $dark-orange;
+	}
 	&_min {
 		font-size: 1.4rem;
 		padding: 2rem 3.4rem;
@@ -272,10 +287,6 @@ body {
 }
 
 .offer {
-	background-image: url(../images/offer.png);
-	background-size: cover;
-	background-position-x: center;
-	background-repeat: no-repeat;
 	padding-top: 2rem;
 	padding-bottom: 12.8rem;
 	&__text {
@@ -362,6 +373,7 @@ body {
 			gap: 2rem;
 			letter-spacing: 0.1rem;
 			opacity: .8;
+			transition: .2s;
 			&:hover {
 				opacity: 1;
 			}
@@ -473,10 +485,6 @@ body {
 }
 
 .about {
-	background-image: url(../images/about.png);
-	background-size: cover;
-	background-position-x: center;
-	background-repeat: no-repeat;
 	padding-bottom: 200px;
 	&__box {
 		display: flex;
@@ -535,10 +543,6 @@ body {
 }
 
 .trends {
-	background-image: url(../images/trends.png);
-	background-size: cover;
-	background-position-x: center;
-	background-repeat: no-repeat;
 	padding-top: 2rem;
 	padding-bottom: 12.8rem;
 	&__text {
@@ -547,10 +551,6 @@ body {
 }
 
 .catolog {
-	background-image: url(../images/catolog.png);
-	background-size: cover;
-	background-position-x: center;
-	background-repeat: no-repeat;
 	padding-top: 2rem;
 	padding-bottom: 12.8rem;
 	&__text {
@@ -570,6 +570,7 @@ body {
 		line-height: 1.5;
 		opacity: 0.8;
 		gap: 1rem;
+		transition: .2s;
 		cursor: pointer;
 		&:hover {
 			opacity: 1;
@@ -667,10 +668,6 @@ body {
 }
 
 .delivery {
-	background-image: url(../images/delivery.png);
-	background-size: cover;
-	background-position-x: center;
-	background-repeat: no-repeat;
 	padding-top: 100px;
 	padding-bottom: 100px;
 	&__box {
@@ -721,7 +718,10 @@ body {
 		background-size: cover;
 		background-position: center center;
 		opacity: 0.4;
+		transform: scale(1);
+		transition: .2s;
 		&:hover {
+			transform: scale(1.05);
 			opacity: 1;
 		}
 	}
@@ -739,7 +739,9 @@ body {
 	}
 }
 
-.contact-box {
+.contact {
+	margin-bottom: 16rem;
+	&-box {
 	display: flex;
 	justify-content: space-between;
 	font-size: 1.8rem;
@@ -777,12 +779,14 @@ body {
 	}
 	&__tel {
 		margin-bottom: 2rem;
+		transition: .2s;
 		&::before {
 			background-image: url(../images/phone.svg);
 		   background-size: 29px 30px;
 		}
 	}
 	&__email {
+		transition: .2s;
 		&::before {
 			background-image: url(../images/mail.svg);
 		   background-size: 29px 30px;
@@ -794,6 +798,7 @@ body {
 		padding: 4rem 6rem;
 		width: 59rem;
 	}
+}
 }
 
 .card {
@@ -823,6 +828,11 @@ body {
 		padding: 2.8rem 5rem 2.4rem 5rem;
 		max-width: 282px;
 		border: none;
+		cursor: pointer;
+		transition: .2s;
+	   &:hover {
+		   background-color: $dark-orange;
+		}
 	}
 	&__check {
 		font-size: 1.2rem;
@@ -831,11 +841,107 @@ body {
 		margin-top: 1.8rem;
 	}
 	&__docs {
-		color: $green;
+		color: rgba($green, .6);
+		text-decoration: none;
+		border-bottom: 1px solid #ecedec;
 	}
 }
 
 .card form {
 	display: flex;
 	flex-direction: column;
+}
+
+.footer {
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		font-size: 1.8rem;
+	}
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		flex-basis: 66.5%;
+	}
+	&__list {
+		list-style-type: none;
+		padding-left: 0;
+		margin: 0;
+	}
+	&__item {
+		margin-bottom: 2.6rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__link {
+		color: $green;
+		text-decoration: none;
+		transition: .2s;
+		&:hover {
+			color: $orange;
+		}
+	}
+	&__tel {
+		font-size: 2.7rem;
+		display: block;
+		margin-bottom: 3rem;
+	}
+	&__text {
+		display: flex;
+		justify-content: space-between;
+		font-size: 1.6rem;
+		color: rgba($green, .6);
+		margin-top: 4rem;
+	}
+	&__author {
+		color: rgba($green, .6);
+		text-decoration: none;
+		transition: .2s;
+		&:hover {
+			color: rgba($green, 1);
+		}
+	}
+}
+
+footer {
+	border-top: 1px solid #e2e3df;
+	padding-top: 7.9rem;
+	padding-bottom: 7rem;
+}
+
+.footer-social {
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 0;
+	margin-top: 3rem;
+	margin-bottom: 0;
+	&__link {
+		display: block;
+		width: 4.6rem;
+		height: 4.6rem;
+		border: 2px solid $green;
+		border-radius: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		opacity: .8;
+		transition: .2s;
+		&:hover {
+			opacity: 1;
+		}
+	}
+	&__vk {
+		background-image: url(../images/vk.svg);
+		background-size: 2.3rem;
+	}
+	&__inst {
+		background-image: url(../images/instagram.svg);
+		background-size: 2.3rem;
+	}
+	&__fb {
+		background-image: url(../images/facebook.svg);
+		background-size: 2.3rem;
+	}
 }
