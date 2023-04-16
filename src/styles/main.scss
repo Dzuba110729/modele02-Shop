@@ -605,6 +605,7 @@ body {
 		text-decoration: none;
 		border-radius: 4rem;
 		display: block;
+		transition: .2s;
 		&:hover {
 			border: 1px solid $orange;
 			color: $orange;
