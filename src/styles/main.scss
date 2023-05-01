@@ -34,6 +34,7 @@ body {
 	background-image: url(../images/fon.png);
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position-x: center;
 }
 
 .header {
@@ -51,7 +52,7 @@ body {
 	}
 	@media (max-width: $r_mob_600) {
 		padding-top: 1.5rem;
-		margin: 0 auto 4rem;
+		margin: 0 auto 3.4rem;
 	}
 	&__navigation {
 		flex-grow: 1;
@@ -92,9 +93,10 @@ body {
 		font-weight: 500;
 		text-decoration: none;
 		flex-basis: 200px;
-		letter-spacing: .013rem;
-		text-align: center;
+		letter-spacing: 1px;
+		text-align: end;
 		transition: .2s;
+		padding-right: 1rem;
 		&:hover {
 			color: $orange;
 		}
@@ -121,6 +123,8 @@ body {
 			background-color: $white;
 			border: 1px solid $green;
 			opacity: .8;
+			width: 3.6rem;
+		   height: 3.6rem;
 		}
 		&:hover {
 			background-color: $green;
@@ -147,8 +151,8 @@ body {
 	&__menu {
 		@media (max-width: $r_tab_900) {
 			display: block;
-			width: 4rem;
-		   height: 4rem;
+			width: 3.6rem;
+		   height: 3.6rem;
 		   border-radius: 100%;
 		   background-color: $white;
 		   background-image: url(../images/menu.svg);
@@ -174,8 +178,8 @@ body {
 	&__phone {
 		@media (max-width: $r_desk_hd) {
 			display: block;
-			width: 4rem;
-		   height: 4rem;
+			width: 3.6rem;
+		   height: 3.6rem;
 		   border-radius: 100%;
 		   background-color: $white;
 		   background-image: url(../images/tel.svg);
@@ -239,7 +243,7 @@ body {
 	&__item {
 		margin-left: 12rem;
 		max-width: 378px;
-		margin-top: 6rem;
+		margin-top: 2.8rem;
 		@media (max-width: $r_desk_1280) {
 			margin-left: 8rem;
 		}
@@ -249,7 +253,7 @@ body {
 			margin-top: 3rem;
 		}
 		@media (max-width: $r_mob_600) {
-			margin-top: 2rem;
+			margin-top: 1.2rem;
 		}
 	}
 	&__link {
@@ -258,7 +262,7 @@ body {
 			text-align: center;
 		}
 		@media (max-width: $r_mob_600) {
-			margin-top: 3rem;
+			margin-top: 3.5rem;
 		}
 	}
 	&__flex {
@@ -336,7 +340,7 @@ body {
 		   animation: shadow 3s linear infinite;
 		}
 		@media (max-width: $r_mob_600) {
-			max-width: 250px;
+			max-width: 227px;
 		}
 	}
 	&__text {
@@ -468,7 +472,7 @@ body {
 	&__cucumber {
 		position: absolute;
 		top: 0;
-		left: 720px;
+		left: 680px;
 		width: 8.5rem;
 		z-index: -1;
 		@media (max-width: $r_desk) {
@@ -484,9 +488,9 @@ body {
 		@media (max-width: $r_mob_600) {
 			display: block;
 			position: absolute;
-			height: 6.5rem;
+			height: 5rem;
 			right: 0;
-			bottom: 200px;
+			bottom: 120px;
 		}
 	}
 	&__beans {
@@ -517,8 +521,8 @@ body {
 		@media (max-width: $r_mob_600) {
 			display: block;
 			left: 0;
-			width: 4.6rem;
-			top: 270px;
+			width: 2.8rem;
+			top: 230px;
 		}
 	}
 }
@@ -577,6 +581,10 @@ body {
 		@media (max-width: $r_mob_600) {
 			font-size: 1.2rem;
 		}
+		@media (max-width: $r_mob_360) {
+			padding-left: 20px;
+         padding-right: 20px;
+		}
 	}
 }
 
@@ -596,7 +604,8 @@ body {
    }
 	@media (max-width: $r_mob_600) {
 		font-size: 1.2rem;
-		padding: 2rem 3rem;
+		padding: 1.8rem 2.6rem;
+		letter-spacing: .8px;
 	}
 	&:hover {
 		background-color: $dark-orange;
@@ -624,6 +633,10 @@ body {
 		@media (max-width: $r_desk_1280) {
 			margin-top: 1.5rem;
 		}
+		@media (max-width: $r_mob_400) {
+			font-size: 1rem;
+			padding: 1.5rem 2rem;
+		}
 	}
 }
 
@@ -631,13 +644,14 @@ body {
 	padding-top: 2rem;
 	padding-bottom: 12.8rem;
 	@media (max-width: $r_mob_600) {
-		padding-bottom: 6rem;
+		padding-bottom: 3rem;
+		padding-top: 1.2rem;
 	}
 	&__text {
 		margin-top: 6rem;
 		max-width: 700px;
 		@media (max-width: $r_mob_600) {
-			margin-top: 3rem;
+			margin-top: 2.2rem;
 		}
 	}
 }
@@ -645,6 +659,9 @@ body {
 .slider {
 	overflow: hidden;
 	padding-top: 9.4rem;
+	&-category {
+		
+	}
 	@media (max-width: $r_tab) {
 		max-width: 450px;
 		margin: 0 auto;
@@ -653,6 +670,9 @@ body {
 	}
 	@media (max-width: $r_mob_600) {
 		padding-top: 4rem;
+	}
+	@media (max-width: $r_mob_360) {
+		max-width: 210px;
 	}
 }
 
@@ -677,10 +697,18 @@ body {
 			@media (max-width: $r_desk_hd) {
 				height: 400px;
 			}
+			@media (max-width: $r_mob_360) {
+				height: 240px;
+				padding: 1rem 3.7rem 1.8rem;
+				text-align: center;
+			}
 			&:hover {
 				.swiper-slide__hover {
 				height: 233px;
 				opacity: 1;
+				@media (max-width: $r_mob_400) {
+					height: auto;
+				}
 			   }
 			&::after {
 				content: '';
@@ -703,14 +731,26 @@ body {
 				background-position: center center;
 			}
 			@media (max-width: $r_mob_360) {
+				background-image: url(../images/catalog/milk.png);
 				background-position: center top;
+				background-size: 120px 140px;
 			}
 		}
 		&_pasta {
 			background-image: url(../images/pasta.png);
+			@media (max-width: $r_mob_360) {
+				background-image: url(../images/catalog/milk.png);
+				background-position: center top;
+				background-size: 120px 140px;
+			}
 		}
 		&_steaks {
 			background-image: url(../images/steaks.png);
+			@media (max-width: $r_mob_360) {
+				background-image: url(../images/catalog/milk.png);
+				background-position: center top;
+				background-size: 120px 140px;
+			}
 		}
 		&__title {
 			font-family: $font-cormorant;
@@ -726,15 +766,18 @@ body {
 			}
 			@media (max-width: $r_mob_400) {
 				margin-top: 0;
-				font-size: 1.6rem;
+				font-size: 1.4rem;
 				text-align: center;
+				min-height: 30px;
 			}
 		}
 		&__hover {
 			height: 0;
 			opacity: 0;
 			@media (max-width: $r_mob_400) {
-				font-size: 1.2rem;
+				font-size: 1rem;
+				height: auto;
+			   opacity: 1;
 			}
 		}
 		&__text {
@@ -743,6 +786,9 @@ body {
 			margin-top: 2.5rem;
 			margin-bottom: 3.4rem;
 			max-width: 263px;
+			@media (max-width: $r_mob_400) {
+				display: none;
+			}
 		}
 		&__link {
 			text-transform: uppercase;
@@ -757,6 +803,8 @@ body {
 			transition: .2s;
 			@media (max-width: $r_mob_400) {
 				font-size: 1.25rem;
+				gap: 1rem;
+				justify-content: center;
 			}
 			&:hover {
 				opacity: 1;
@@ -770,8 +818,8 @@ body {
 				background-size: cover;
 				background-repeat: no-repeat;
 				@media (max-width: $r_mob_400) {
-					width: 2.5rem;
-				   height: 2.5rem;
+					width: 2rem;
+				   height: 2rem;
 				}
 			}
 		}
@@ -782,7 +830,7 @@ body {
 			height: 322px;
 			text-align: center;
 			@media (max-width: $r_mob_400) {
-				height: 250px;
+				height: 110px;
 			}
 		}
 		&__image {
@@ -790,6 +838,9 @@ body {
 			max-width: 351px;
 			height: 100%;
 			object-fit: contain;
+			@media (max-width: $r_mob_400) {
+				height: 90px;
+			}
 		}
 		&__footer {
 			display: flex;
@@ -874,6 +925,9 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	@media (max-width: $r_mob_360) {
+		bottom: -40px;
+	}
 }
 
 .swiper-pagination-bullet-active {
@@ -955,7 +1009,7 @@ body {
 			flex-direction: column;
 		}
 		@media (max-width: $r_mob_500) {
-			margin-top: 3.5rem;
+			margin-top: 2.3rem;
 		}
 		&-text {
 			margin-left: 12rem;
@@ -991,16 +1045,7 @@ body {
 				gap: 6rem;
 			}
 			@media (max-width: $r_desk) {
-				gap: 3rem;
-			}
-			@media (max-width: $r_mob_600) {
-				gap: 2rem;
-			}
-			@media (max-width: $r_mob_400) {
-				gap: 1.5rem;
-			}
-			@media (max-width: $r_mob_360) {
-				gap: 1rem;
+				gap: 4rem;
 			}
 		}
 		&-item {
@@ -1009,7 +1054,7 @@ body {
 			justify-content: center;
 			align-items: center;
 			@media (max-width: $r_mob_400) {
-				font-size: 2.5rem;
+				font-size: 1.4rem;
 			}
 			&::before {
 				content: '';
@@ -1020,23 +1065,37 @@ body {
 				border: 1px solid rgba($green, 0.4);
 				border-radius: 100%;
 				margin-bottom: 1.5rem;
+				@media (max-width: $r_mob_400) {
+					width: 60px;
+				   height: 60px;
+					margin-bottom: 1rem;
+				}
 			}
 			&:nth-child(1) {
 				&::before {
 					background-image: url(../images/fruits.svg);
 					background-size: 44px 41px;
+					@media (max-width: $r_mob_400) {
+						background-size: 30px 28px;
+					}
 				}
 			}
 			&:nth-child(2) {
 				&::before {
 					background-image: url(../images/traditional.svg);
 					background-size: 40px 40px;
+					@media (max-width: $r_mob_400) {
+						background-size: 27px 27px;
+					}
 				}
 			}
 			&:nth-child(3) {
 				&::before {
 					background-image: url(../images/good.svg);
 					background-size: 45px 39px;
+					@media (max-width: $r_mob_400) {
+						background-size: 31px 27px;
+					}
 				}
 			}
 		}
@@ -1049,12 +1108,19 @@ body {
 	@media (max-width: $r_tab) {
 		padding-bottom: 6rem;
 	}
+	@media (max-width: $r_mob_400) {
+		padding-top: 1.2rem;
+	}
 	&__text {
 		margin-top: 4rem;
+		@media (max-width: $r_mob_400) {
+			margin-top: 2rem;
+		}
 	}
 }
 
 .catolog {
+	overflow: hidden;
 	padding-top: 2rem;
 	@media (max-width: $r_mob_600) {
 		padding-top: 0;
@@ -1112,8 +1178,8 @@ body {
 	@media (max-width: $r_tab) {
 		margin-top: 4rem;
 	}
-	@media (max-width: $r_mob_400) {
-		gap: 1rem;
+	@media (max-width: $r_mob_500) {
+		display: none;
 	}
 	&__item {
 		flex-basis: 230px;
@@ -1145,6 +1211,31 @@ body {
 			color: $orange;
 		}
 	}
+	&__slide {
+		padding: 1.5rem 1rem;
+		font-size: 1rem;
+		text-align: center;
+		border: 1px solid rgba($green, .5);
+		color: rgba($green, .5);
+		text-decoration: none;
+		border-radius: 4rem;
+		display: block;
+		transition: .2s;
+		flex-basis: 112px;
+		margin-top: 4rem;
+		&:hover {
+			border: 1px solid $orange;
+			color: $orange;
+		   box-shadow: none;
+		}
+	}
+}
+
+.categorySwiper {
+	display: none;
+	@media (max-width: $r_mob_500) {
+		display: block;
+	}
 }
 
 .catolog__grid {
@@ -1158,11 +1249,20 @@ body {
 	@media (max-width: $r_desk) {
 		grid-template-columns: repeat(2, 1fr);
 	}
+	@media (max-width: $r_mob_500) {
+		margin-top: 2rem;
+		gap: 10px;
+	}
 	&-item {
 		border: 1px solid rgba($green, 0.4);
 		border-radius: 2rem;
 		padding: 2.7rem 3rem 3.8rem;
 		box-sizing: border-box;
+		&:nth-child(n+5) {
+			@media (max-width: $r_desk) {
+			   display: none;
+		   }
+		}
 		@media (max-width: $r_tab) {
 			max-width: 45rem;
 			margin: 0 auto;
