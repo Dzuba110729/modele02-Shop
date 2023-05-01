@@ -42,6 +42,17 @@
 				<button href="#" class="header__cart">
 					<span class="header__counter">0</span>
 				</button>
+				<div class="header__dropdown" id="Notification">
+					<div class="header__cover">
+						<img class="header__img" src="images/catalog/milk.png" alt="Молоко">
+					</div>
+					<p class="header__text">Вы добавили в корзину
+						<a class="header__product" href="">Молоко топленое</a>
+					</p>
+					<button type="button" class="close"
+						onclick="document.getElementById('Notification').style.visibility='hidden'">
+					</button>
+				</div>
 			</div>
 		</header>
 		<div class="container">
@@ -66,15 +77,39 @@
 					<div class="main__line">
 						<img class="main__image" src="images/plate.png" alt="">
 					</div>
-					<button class="main__btn main__btn_1" type="button">
+					<button class="main__btn main__btn_1" type="button"
+						onclick="document.getElementById('FoodOne').style.visibility='visible'">
 						<span class="main__food">Авокадо</span> 134 руб.
 					</button>
-					<button class="main__btn main__btn_2" type="button">
+					<div class="main__about main__about_1" id="FoodOne">
+						<h3 class="main__title">Авокадо</h3>
+						<p class="main__description">Авокадо Молодой, Свежий урожай, 1кг</p>
+						<p class="main__price">134 руб/кг</p>
+						<button class="close" onclick="document.getElementById('FoodOne').style.visibility='hidden'">
+						</button>
+					</div>
+					<button class="main__btn main__btn_2" type="button"
+						onclick="document.getElementById('FoodTwo').style.visibility='visible'">
 						<span class="main__food">Картофель</span> 169 руб.
 					</button>
-					<button class="main__btn main__btn_3" type="button">
+					<div class="main__about main__about_2" id="FoodTwo">
+						<h3 class="main__title">Картофель</h3>
+						<p class="main__description">Картофель Молодой, Свежий урожай, 1кг</p>
+						<p class="main__price">169 руб/кг</p>
+						<button class="close" onclick="document.getElementById('FoodTwo').style.visibility='hidden'">
+						</button>
+					</div>
+					<button class="main__btn main__btn_3" type="button"
+						onclick="document.getElementById('FoodThree').style.visibility='visible'">
 						<span class="main__food">Томаты</span> 215 руб.
 					</button>
+					<div class="main__about main__about_3" id="FoodThree">
+						<h3 class="main__title">Томаты</h3>
+						<p class="main__description">Томаты Молодой, Свежий урожай, 1кг</p>
+						<p class="main__price">215 руб/кг</p>
+						<button class="close" onclick="document.getElementById('FoodThree').style.visibility='hidden'">
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -282,14 +317,14 @@
 			</ul>
 			<div class="swiper categorySwiper">
 				<div class="swiper-wrapper">
-				  <div class="swiper-slide category__slide">Молочные продукты</div>
-				  <div class="swiper-slide category__slide">Бакалея</div>
-				  <div class="swiper-slide category__slide">Мясо, птица</div>
-				  <div class="swiper-slide category__slide">Детям</div>
-				  <div class="swiper-slide category__slide">Овощи и фрукты</div>
+					<div class="swiper-slide category__slide">Молочные продукты</div>
+					<div class="swiper-slide category__slide">Бакалея</div>
+					<div class="swiper-slide category__slide">Мясо, птица</div>
+					<div class="swiper-slide category__slide">Детям</div>
+					<div class="swiper-slide category__slide">Овощи и фрукты</div>
 				</div>
 				<div class="swiper-pagination"></div>
-			 </div>
+			</div>
 			<div class="catolog__grid">
 				<div class="catolog__grid-item">
 					<div class="catolog__grid-cover">
@@ -530,7 +565,8 @@
 						</ul>
 						<div class="footer__contact">
 							<a href="tel:+79453425555" class="footer__link footer__tel">+7 945 342 55 55</a>
-							<a href="mailto:healthlyfood@mail.ru" class="footer__link footer__mail">e-mail: healthlyfood@mail.ru</a>
+							<a href="mailto:healthlyfood@mail.ru" class="footer__link footer__mail">e-mail:
+								healthlyfood@mail.ru</a>
 							<ul class="footer-social">
 								<li class="footer-social__item">
 									<a href="#" target="_blank" class="footer-social__link footer-social__vk"></a>
