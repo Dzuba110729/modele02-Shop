@@ -1319,13 +1319,11 @@ body {
 		   font-size: 1rem;
 		   flex-basis: 112px;
 		   margin-top: 2rem;
-		   &:hover {
-		      box-shadow: none;
-		   }
 	   }
 		&:hover {
 			border: 1px solid $orange;
 			color: $orange;
+			box-shadow: none;
 		}
 	}
 }
